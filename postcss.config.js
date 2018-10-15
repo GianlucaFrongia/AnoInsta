@@ -7,9 +7,6 @@ const config = {
 	  },
 	  'postcss-nested': {},
 	  'postcss-nesting': {},
-	  'postcss-custom-media': {
-		 exportTo: './src/css/global.css' // => @custom-selector --small-viewport (max-width: 30em);
-	  },
 	  'postcss-custom-selectors': {},
 	  'postcss-preset-env': {
 		 stage: 0,
