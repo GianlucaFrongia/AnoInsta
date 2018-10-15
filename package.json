@@ -1,0 +1,9 @@
+{
+  "name": "AnoInsta",
+  "version": "0.1.0",
+  "description": "The Anonyme Instagram",
+  "main": "index.js",
+  "repository": "https://github.com/GianlucaFrongia/AnoInsta.git",
+  "author": "Gianluca Frongia <gianluca.frongia@gibmit.ch>",
+  "license": "MIT"
+}
