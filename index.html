@@ -1,15 +1,54 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 	<meta charset="utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>Page Title</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" media="screen" href="main.css" />
 </head>
+
 <body>
 	<script src="main.js"></script>
+	<main class="container main-panel">
+
+		<section class="card-panel item-container">
+			<header class="item-header">
+				<h4>Test</h4>
+				<span>User</span>
+			</header>
+
+			<picture class="item-picture">
+				<source srcset="images/mops.jpg" media="(min-width: 600px)">
+				<img class="materialboxed " src="images/mops.jpg" alt="MDN">
+			</picture>
+			<div class="item-interaction">
+				<a class="item-interaction_like btn-floating btn-medium waves-effect waves-light"><i class="material-icons">favorite_border</i></a>
+				<a class="item-interaction_comment btn-floating btn-medium waves-effect waves-light"><i class="material-icons">comment</i></a>
+			</div>
+			<div class="item-comments">
+				<div class="row">
+					<span class="col s2">User</span>
+					<span class="col s10">klkjfjkaaödslkfjlöksajfölaskjfalösdkfj</span>
+				</div>
+				<div class="row">
+					<span class="col s2">User</span>
+					<span class="col s10">klkjfjkaaödslkfjlöksajfölaskjfalösdkfj</span>
+				</div>
+				<div class="row">
+					<span class="col s2">User</span>
+					<span class="col s10">klkjfjkaaödslkfjlöksajfölaskjfalösdkfj</span>
+				</div>
+
+			</div>
+		</section>
+
+	</main>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+	<script src="main.js"></script>
 </body>
+
 </html>

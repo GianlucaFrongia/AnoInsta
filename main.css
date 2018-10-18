@@ -1,0 +1,53 @@
+
+/*=====  Resets ======*/
+h4 {
+	margin: 0;
+}
+.main-panel {
+	display: flex;
+	justify-content: center;
+}
+
+.item-container {
+	max-width: 500px;
+}
+
+.item-picture {
+	display: flex;
+	justify-content: center;
+}
+
+.item-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.item-interaction {
+	margin: 10px 0;
+	padding: 0 0 5px 0;
+	border-bottom: 2px solid #eee;
+}
+
+.item-interaction_like:hover,
+.item-interaction_like.--active{
+	background-color: #d32f2f;
+}
+
+.item-interaction_comment:hover,
+.item-interaction_comment.--active{
+	background-color: #f9a825;
+}
+
+
+.item-comments {
+	max-height: 50px;
+	overflow-y: auto;
+}
+
+
+img {
+	height: 500px;
+	width: 500px;
+	object-fit: cover;
+}
