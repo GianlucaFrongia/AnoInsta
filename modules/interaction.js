@@ -5,14 +5,23 @@ class Interaction {
 
 	setActive(){
 		var item = this.items.map(el => {
-			return document.querySelector(el);
-		});		
-		item.forEach(element => {				
-			element.addEventListener('click', function (params) {
-				params.stopPropagation();
-				this.classList.toggle('--active');				
-			}, false);
+			return document.querySelectorAll(el);
 		});
+		
+		for (const key in item) {
+
+			item[key].forEach(element => {							
+				element.addEventListener('click', function (e) {
+					e.stopPropagation();		
+					addActive(e);
+				}, false);
+			});
+		}
+		
+		function addActive(e){
+			
+			e.currentTarget.classList.toggle('--active');
+		}		
 	}
 	
 }
