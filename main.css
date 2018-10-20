@@ -2,22 +2,59 @@
 /*=====  Resets ======*/
 h4 {
 	margin: 0;
-}
-.main-panel {
-	display: flex;
-	justify-content: center;
+	font-size: 1.9rem;
 }
 
-.item-container {
+body {
+	display: flex;
+	min-height: 100vh;
+	flex-direction: column;
+ }
+
+.main-panel {
+	flex: 1 0 auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-direction: column;
 	max-width: 500px;
 }
 
+.main-panel_search {
+	width: 100%;
+	margin: 15px 0 15px 0;
+}
+
+.main-panel_search > .input-field {
+	background-color: #d32f2f;
+
+}
+
+
+/*=============================================
+=            ITEMS            =
+=============================================*/
+.items-wrapper {
+	width: 100%;
+}
+
+
+/*=====  End of ITEMS  ======*/
+
+
+
+
+.item-container {
+	width: 100%;
+	padding: 0;
+}
+
 .item-picture {
-	display: flex;
-	justify-content: center;
+	
 }
 
 .item-header {
+	padding: 10px 15px 10px 15px;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -25,7 +62,7 @@ h4 {
 
 .item-interaction {
 	margin: 10px 0;
-	padding: 0 0 5px 0;
+	padding: 5px 15px 5px 15px;
 	border-bottom: 2px solid #eee;
 }
 
@@ -41,13 +78,63 @@ h4 {
 
 
 .item-comments {
+	padding: 5px 15px 5px 15px;
 	max-height: 50px;
 	overflow-y: auto;
 }
 
+.item-comments_comment {
+	word-break: break-all;
+}
 
 img {
 	height: 500px;
-	width: 500px;
+	max-width: 500px;
+	width: 100%;
 	object-fit: cover;
 }
+
+
+/**
+ *
+ * Pagiantion
+ *
+ */
+
+.pagiantion-section {
+	margin: 100px 0 100px 0;
+
+}
+
+
+/*=============================================
+=            NAVBAR            =
+=============================================*/
+.nav {
+	padding-left: 15px;
+}
+
+
+.fixed-action-btn {
+	margin: 15px 0 0 auto;
+	position: relative;
+	left: initial;
+	right: initial;
+	bottom: initial;
+}
+
+
+/*=====  End of NAVBAR  ======*/
+
+
+
+
+/*=============================================
+=            FOOTER            =
+=============================================*/
+.page-footer {
+}
+
+
+/*=====  End of FOOTER  ======*/
+
