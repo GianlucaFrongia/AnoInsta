@@ -2,7 +2,11 @@ class ItemsLoader {
 	constructor(api){
 		this.api = api;
 	}
-	
+
+	/* 
+	* Hier ist das Template für ein Card.
+	* Anhand vom Count generiert er diese und fügt sie auf der Seite hinzu
+	*/
 	loadTemplate(count = 3){
 		const wrapper = document.querySelector('.items-wrapper');
 		let template = `
@@ -34,6 +38,9 @@ class ItemsLoader {
 		}		
 	}
 
+	/*
+	* Füllt die Cards mit Content ahand der API
+	*/
 	loadHeader(item){
 		let title = document.querySelectorAll('.item-header_title');
 		let user = document.querySelectorAll('.item-header_user');
@@ -55,6 +62,9 @@ class ItemsLoader {
 		});
 	}
 
+	/*
+	* Pagination vorwärts wo die Items hinzufügt
+	*/
 	loadNextItems(){
 		let next = document.querySelector('.pagination-next');
 		let pages = document.querySelectorAll('.pagination-page');
@@ -74,6 +84,10 @@ class ItemsLoader {
 		}, false);
 	}
 
+
+	/*
+	* Pagination ruckwärts wo die Items hinzufügt
+	*/
 	loadPreviousItems(){
 		let before = document.querySelector('.pagination-before');
 

@@ -3,6 +3,11 @@ class Interaction {
 		this.items = items;
 	}
 
+	/*
+	* 
+	* Setzten den Link oder Ciomment Button als Aktiv
+	*
+	*/
 	setActive(){
 		var item = this.items.map(el => {
 			return document.querySelectorAll(el);
