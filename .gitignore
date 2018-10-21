@@ -2,8 +2,7 @@
 # parcel
 
 .cache
-dist
-./dist
+
 
 # Logs
 logs
