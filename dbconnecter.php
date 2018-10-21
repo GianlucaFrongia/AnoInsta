@@ -1,8 +1,8 @@
 <?php
 $host = 'localhost';
 $username = 'root';
-$password = '';
-$database = 'anoinsta';
+$password = 'root';
+$database = 'Anoinsta';
 
 $mysqli = new mysqli($host, $username, $password, $database);
 

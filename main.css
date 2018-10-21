@@ -14,14 +14,25 @@ body {
 .main-panel {
 	flex: 1 0 auto;
 	display: flex;
-	justify-content: space-between;
 	align-items: center;
 	flex-direction: column;
-	max-width: 500px;
+	max-width: 1900px;
+	min-height: 1000px;
 }
+
+.grid {
+	position: relative;
+
+	margin: 0 auto;
+	
+	height: 100%;
+	width: 100%;
+	max-width: 100%;
+	max-height: 100%;}
 
 .main-panel_search {
 	width: 100%;
+	max-width: 500px;
 	margin: 15px 0 15px 0;
 }
 
@@ -34,26 +45,39 @@ body {
 /*=============================================
 =            ITEMS            =
 =============================================*/
-.items-wrapper {
-	width: 100%;
-}
 
 
 /*=====  End of ITEMS  ======*/
 
+.item-hidden {
+	display: block !important;
+	visibility: hidden;
+}
 
+.item-show {
+	display: block !important;
+	visibility: visible;
+}
 
 
 .item-container {
-	width: 100%;
 	padding: 0;
+	display: block;
+	position: absolute;
+	margin: 15px;
 }
 
+@media only screen and (min-width: 600px) {
+	.item-container {
+		width: 500px;
+	}
+}
 .item-picture {
 	
 }
 
 .item-header {
+	height: 80px;
 	padding: 10px 15px 10px 15px;
 	display: flex;
 	justify-content: space-between;
@@ -94,7 +118,9 @@ img {
 	object-fit: cover;
 }
 
-
+#modal1 {
+	padding-bottom: 50px;
+}
 /**
  *
  * Pagiantion
@@ -103,7 +129,9 @@ img {
 
 .pagiantion-section {
 	margin: 100px 0 100px 0;
-
+	max-width: 500px;
+	margin-top: auto;
+	align-self: center;
 }
 
 
@@ -121,6 +149,8 @@ img {
 	left: initial;
 	right: initial;
 	bottom: initial;
+	max-width: 500px;
+
 }
 
 
