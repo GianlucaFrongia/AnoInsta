@@ -26,7 +26,7 @@
             <br>
             <div class="col">
               <label for="file">Datei:</label>
-              <input type="hidden" name="MAX_FILE_SIZE" value="30000" />
+              <input type="hidden" name="MAX_FILE_SIZE" value="1000000" />
               <input type="file" id="file" name="file" required>
             </div>
             <br>

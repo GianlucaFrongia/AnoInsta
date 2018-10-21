@@ -64,7 +64,7 @@ $imagen->thumbnailImage(100, 0);
 $imagen->writeImage($uploaddir."/web_".$_FILES['file']['name']);
 
 echo 'File is uploaded successfully.';
-y
+
 } catch (RuntimeException $e) {
 
 echo $e->getMessage();
