@@ -1,6 +1,8 @@
+'use strict';
 import Interaction from './modules/interaction.js';
 import ItemsLoader from './modules/itemsLoader.js';
 import GetApi from './modules/getApi.js';
+import Grid from './modules/grid.js';
 
 /*
 * Init der Module
@@ -9,20 +11,46 @@ let api = new GetApi('http://jsonplaceholder.typicode.com/photos?_start=10&_limi
 let call = api.getItems();
 
 let itemsLoader = new ItemsLoader();
-let interaction = new Interaction(['.item-interaction_like', '.item-interaction_comment']);
+let interaction = new Interaction(['.item-container-interaction_like']);
+let grid = new Grid();
 
 
 /*
 * Methoden aufrufe
 */
-itemsLoader.loadTemplate(3);
+itemsLoader.loadTemplate(10);
 itemsLoader.loadHeader(call);
 itemsLoader.loadNextItems();
 itemsLoader.loadPreviousItems();
 
 interaction.setActive();
 
+var gridI = grid.init();
 
+gridI.refreshItems().layout();
+
+
+/*;*/
+
+
+let input = document.querySelector('#search');
+input.onkeyup = keyup;
+let inputTextValue;
+
+function keyup(e) {
+	inputTextValue = e.target.value;
+	let items = gridI.getItems();
+	if(inputTextValue){
+		gridI.filter(function (item) {
+			console.log(item.getElement().getAttribute('data-id'));
+			return item.getElement().getAttribute('data-id') == inputTextValue;
+		 });
+	} else {
+		gridI.show(items);
+
+	}
+	
+ }
 /*
 * Material CSS Inits
 */
@@ -41,3 +69,8 @@ document.addEventListener('DOMContentLoaded', function() {
 	var instance = M.FloatingActionButton.getInstance(elems[0]);
 	instance.open();
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+	var elems = document.querySelectorAll('.modal');
+	var instances = M.Modal.init(elems);
+ });

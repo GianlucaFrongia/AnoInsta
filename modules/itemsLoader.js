@@ -10,25 +10,18 @@ class ItemsLoader {
 	loadTemplate(count = 3){
 		const wrapper = document.querySelector('.items-wrapper');
 		let template = `
-		<section class="card-panel item-container">
+		<section class="card-panel item-container" data-id="">
 		<header class="item-header">
 			<h4 class="item-header_title"></h4>
 			<span class="item-header_user">User</span>
 		</header>
 
 		<picture class="item-picture">
-			<source class="item-picture_source" srcset="images/mops.jpg" media="(min-width: 600px)">
-			<img class="item-picture_img materialboxed" src="https://via.placeholder.com/500x500" alt="MDN">
+			<source class="item-picture_source" srcset="" media="(max-width: 600px)">
+			<img class="item-picture_img materialboxed" src="" alt="MDN">
 		</picture>
 		<div class="item-interaction">
 			<a class="item-interaction_like btn-floating btn-medium waves-effect waves-light"><i class="material-icons">favorite_border</i></a>
-			<a class="item-interaction_comment btn-floating btn-medium waves-effect waves-light"><i class="material-icons">comment</i></a>
-		</div>
-		<div class="item-comments">
-			<div class="row">
-				<span class="col s2 item-comments_user">User</span>
-				<span class="col s10 item-comments_comment">klkjfjkaaödslkfjlöksajfölaskjfalösdkfj</span>
-			</div>
 		</div>
 	</section>
 		`;
@@ -42,22 +35,22 @@ class ItemsLoader {
 	* Füllt die Cards mit Content ahand der API
 	*/
 	loadHeader(item){
+		let container = document.querySelectorAll('.item-container');
 		let title = document.querySelectorAll('.item-header_title');
 		let user = document.querySelectorAll('.item-header_user');
 		let img = document.querySelectorAll('.item-picture_img');
 		let source = document.querySelectorAll('.item-picture_source');
-		let commentUser = document.querySelectorAll('.item-comments_user');
-		let comment = document.querySelectorAll('.item-comments_comment');
+
 
 
 		item.then(e => {	
 			for (let i = 0; i < e.length; i++) {
+				container[i].dataset.id = e[i].id;
 				title[i].textContent = e[i].title;
 				user[i].textContent = e[i].id;
 				img[i].src = e[i].url;
 				source[i].srcset = e[i].thumbnailUrl;
-				commentUser[i].textContent = e[i].id;
-				comment[i].textContent = e[i].title;
+	
 			}
 		});
 	}
