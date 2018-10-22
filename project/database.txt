@@ -1,0 +1,49 @@
+-- phpMyAdmin SQL Dump
+-- version 4.8.3
+-- https://www.phpmyadmin.net/
+--
+-- Host: localhost:8889
+-- Erstellungszeit: 22. Okt 2018 um 06:05
+-- Server-Version: 5.7.23
+-- PHP-Version: 7.2.8
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
+--
+-- Datenbank: `Anoinsta`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Tabellenstruktur für Tabelle `picture`
+--
+
+CREATE TABLE `picture` (
+  `id` int(11) NOT NULL,
+  `user` varchar(30) DEFAULT NULL,
+  `title` varchar(120) DEFAULT NULL,
+  `www` varchar(250) DEFAULT NULL,
+  `thumb` varchar(250) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Indizes der exportierten Tabellen
+--
+
+--
+-- Indizes für die Tabelle `picture`
+--
+ALTER TABLE `picture`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT für exportierte Tabellen
+--
+
+--
+-- AUTO_INCREMENT für Tabelle `picture`
+--
+ALTER TABLE `picture`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
