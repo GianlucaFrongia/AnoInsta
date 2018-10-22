@@ -11,7 +11,7 @@ let api = new GetApi('http://jsonplaceholder.typicode.com/photos?_start=10&_limi
 let call = api.getItems();
 
 let itemsLoader = new ItemsLoader();
-let interaction = new Interaction(['.item-container-interaction_like']);
+let interaction = new Interaction(['.item-interaction_like']);
 let grid = new Grid();
 
 
@@ -30,19 +30,19 @@ var gridI = grid.init();
 gridI.refreshItems().layout();
 
 
-/*;*/
-
-
+/* Die Such und Filter Funktion */
 let input = document.querySelector('#search');
+/* Onkey Up Event beim Input Field */
 input.onkeyup = keyup;
 let inputTextValue;
 
 function keyup(e) {
 	inputTextValue = e.target.value;
+	/* Hold Items des Grids */
 	let items = gridI.getItems();
 	if(inputTextValue){
 		gridI.filter(function (item) {
-			console.log(item.getElement().getAttribute('data-id'));
+			/* Vergleicht den Item Attribute (data-id) mit dem Inpute Search Value */
 			return item.getElement().getAttribute('data-id') == inputTextValue;
 		 });
 	} else {
@@ -54,11 +54,6 @@ function keyup(e) {
 /*
 * Material CSS Inits
 */
-document.addEventListener('DOMContentLoaded', function() {
-	var elems = document.querySelectorAll('.materialboxed');
-	var instances = M.Materialbox.init(elems);
-});
-
 
 document.addEventListener('DOMContentLoaded', function() {
 	var elems = document.querySelectorAll('.fixed-action-btn');

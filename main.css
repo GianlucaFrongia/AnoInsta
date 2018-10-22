@@ -49,19 +49,11 @@ body {
 
 /*=====  End of ITEMS  ======*/
 
-.item-hidden {
-	display: block !important;
-	visibility: hidden;
-}
-
-.item-show {
-	display: block !important;
-	visibility: visible;
-}
-
 
 .item-container {
 	padding: 0;
+	height: 650px;
+	max-width: 500px;
 	display: block;
 	position: absolute;
 	margin: 15px;

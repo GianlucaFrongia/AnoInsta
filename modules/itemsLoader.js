@@ -18,7 +18,7 @@ class ItemsLoader {
 
 		<picture class="item-picture">
 			<source class="item-picture_source" srcset="" media="(max-width: 600px)">
-			<img class="item-picture_img materialboxed" src="" alt="MDN">
+			<img class="item-picture_img" src="" alt="MDN">
 		</picture>
 		<div class="item-interaction">
 			<a class="item-interaction_like btn-floating btn-medium waves-effect waves-light"><i class="material-icons">favorite_border</i></a>
